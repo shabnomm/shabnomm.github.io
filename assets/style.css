@@ -1,0 +1,41 @@
+
+:root{color-scheme:light;--b1:#ece7df;--b2:#f5f2ec;--fg:#111;--mut:#47433c;--ac:#2b4a3a;--line:rgba(0,0,0,.3);--ghost:rgba(70,58,46,.4);--x:Michroma,"Josefin Sans",sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}::selection{background:var(--fg);color:var(--b2)}
+body{margin:0;background:var(--b1);color:var(--fg);font:400 1.06rem/1.75 "Josefin Sans",system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2{font-family:"Josefin Sans",sans-serif;text-transform:uppercase}
+h1{font-weight:200;font-size:clamp(2.2rem,8vw,6rem);line-height:1.02;letter-spacing:.01em;margin:4.5rem 0 1.5rem}
+h2{font-weight:300;font-size:clamp(1.5rem,3vw,2.1rem);letter-spacing:.06em;margin:0 0 1.5rem}
+h3{font-weight:400;font-size:1.15rem;letter-spacing:.03em;margin:.2rem 0 .3rem}
+main,header.top,footer{max-width:62rem;margin:0 auto;padding:0 1.5rem}
+a{color:var(--fg);text-underline-offset:4px}a:focus-visible,button:focus-visible{outline:2px solid var(--ac);outline-offset:3px}
+.skip{position:absolute;left:-999px}.skip:focus{left:1rem;top:1rem;background:var(--b2);padding:.5rem;z-index:99}
+header.top{position:sticky;top:0;z-index:10;max-width:none;display:flex;flex-wrap:wrap;align-items:center;gap:.6rem 2rem;padding:1.1rem max(1.5rem,calc((100% - 59rem)/2));background:color-mix(in srgb,var(--b1) 85%,transparent);backdrop-filter:blur(8px)}
+.brand{font:italic 600 1.7rem/1 "Josefin Sans",sans-serif;color:var(--fg);text-decoration:none;margin-right:auto;letter-spacing:-.04em}
+.top nav{display:flex;flex-wrap:wrap;gap:.4rem 1.8rem}.top nav a{font:400 .72rem var(--x);letter-spacing:.12em;text-transform:lowercase;color:var(--fg);text-decoration:none;opacity:.7}.top nav a:hover,.top nav a[aria-current]{opacity:1;text-decoration:underline}
+.meta,.label,.exc,dt,.sub,.btn,.proof span,footer,.card>a{font-family:var(--x);font-size:.72rem;letter-spacing:.12em;line-height:1.9}
+section{position:relative;isolation:isolate;padding:7rem 0 5rem}
+section:before{content:"";position:absolute;z-index:-1;top:0;bottom:0;left:50%;width:100vw;transform:translateX(-50%);background:var(--b2)}
+section:nth-of-type(odd):before{background:var(--b1)}
+.hero{padding:3rem 0 5rem}.hero:after{content:"";position:absolute;z-index:-1;top:0;bottom:0;left:50%;width:100vw;transform:translateX(-50%);pointer-events:none;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1400 900' preserveAspectRatio='none'%3E%3Cg fill='none' stroke='%23000' stroke-opacity='.2'%3E%3Cpath d='M-50 520C300 140 900 160 1450 560'/%3E%3Cpath d='M-50 880C400 380 1000 420 1450 140'/%3E%3C/g%3E%3C/svg%3E") center/100% 100% no-repeat}
+.subs{display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem 2rem;margin-bottom:3rem}.sub{margin:0}
+.lead{font-weight:300;font-size:clamp(1.25rem,2.4vw,1.7rem);line-height:1.5;max-width:40rem;margin:0 0 2.5rem}
+.btn{display:inline-block;background:var(--fg);color:var(--b2);padding:.9rem 2.6rem;text-decoration:none;margin:0 1rem 1rem 0;border:1px solid var(--fg)}.btn.alt{background:none;color:var(--fg)}.btn:hover{opacity:.8}
+.ghost{font-weight:200;font-size:clamp(3.6rem,15vw,10.5rem);line-height:.9;text-transform:uppercase;color:transparent;-webkit-text-stroke:1.2px var(--ghost);margin:-.4em 0 .15em -.04em;user-select:none}
+.proof{padding:3.5rem 0}.proof{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:2rem}
+.proof strong{display:block;font:200 clamp(1.8rem,3.5vw,2.6rem)/1.15 "Josefin Sans";text-transform:uppercase}.proof span{color:var(--mut)}
+.three{display:grid;grid-template-columns:repeat(auto-fit,minmax(15rem,1fr));gap:2.5rem;counter-reset:n}.three>div{border-top:1px solid var(--line);padding-top:1rem;counter-increment:n}.three>div:before{content:"0" counter(n);font:400 .72rem var(--x);letter-spacing:.12em}.three p{color:var(--mut)}
+.grid{display:block}.card{display:grid;grid-template-columns:1fr auto;gap:.1rem 2rem;border-bottom:1px solid var(--line);padding:1.8rem 0}.card>*{grid-column:1;margin:0}.card>a{grid-column:2;grid-row:1/span 3;align-self:center;color:var(--fg);text-decoration:none;border:1px solid var(--line);border-radius:50%/65%;padding:.5rem 1.4rem}.card>a:hover{background:var(--fg);color:var(--b2)}
+.case{border-bottom:1px solid var(--line);padding:2rem 0;margin:0}.case>h2{margin:.2rem 0 .6rem;font-size:1.6rem}.case p{margin:.3rem 0}
+.meta{color:var(--mut)}.card p,.case p{color:var(--fg)}
+.label{display:inline-block;width:fit-content;border:1px solid var(--fg);padding:.15rem .7rem;margin:.7rem 0!important}.wip{color:var(--mut)}
+.exc{color:var(--mut);margin-top:1rem!important}pre{margin:.4rem 0 1rem;padding:1rem 1.2rem;background:rgba(255,255,255,.35);border:1px solid var(--line);overflow-x:auto;font:.78rem/1.6 ui-monospace,Menlo,Consolas,monospace}code{font-family:inherit}
+dl{margin:0}dt{margin-top:1rem;color:var(--mut)}dd{margin:.2rem 0 0}
+.plain{list-style:none;padding:0}.plain li{border-bottom:1px solid var(--line);padding:.8rem 0}
+.flow{list-style:none;padding:0;margin:3rem 0;counter-reset:s}.flow li{counter-increment:s;display:grid;grid-template-columns:5rem 1fr;border-bottom:1px solid var(--line);padding:1.4rem 0}.flow li:before{content:"0" counter(s);font:400 .72rem var(--x);letter-spacing:.12em;padding-top:.6rem}.flow li>*{grid-column:2;margin:0}.flow p{color:var(--mut)}
+.about{display:grid;grid-template-columns:minmax(9rem,15rem) 1fr;gap:3rem;align-items:start;margin:2rem 0}.oval{aspect-ratio:3/4;border-radius:50%;background:var(--fg);color:var(--b2);display:grid;place-items:center;font:200 clamp(2.5rem,6vw,4rem) "Josefin Sans";letter-spacing:.04em}
+img.oval{width:100%;height:auto;object-fit:cover;display:block;background:none}
+.contact{border:1px solid var(--fg);padding:2rem;line-height:2.3;font-size:1.1rem}
+footer{margin-top:5rem;padding-top:2rem;padding-bottom:3rem;text-align:center;border-top:1px solid var(--line)}footer p{display:flex;flex-wrap:wrap;justify-content:center;gap:.5rem 3rem;margin:.5rem 0}footer a{color:var(--fg);text-decoration:none}footer a:hover{text-decoration:underline}.copy{color:var(--mut)}
+.js .rv{opacity:0;transform:translateY(14px);transition:opacity .7s ease,transform .7s ease}.js .rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none;transition:none}}
+@media(max-width:720px){header.top{gap:.3rem 1.4rem}.brand{width:100%;margin-right:0}.card{grid-template-columns:1fr}.card>a{grid-column:1;grid-row:auto;justify-self:start;margin-top:.8rem}.about{grid-template-columns:1fr}.oval{max-width:12rem}.flow li{grid-template-columns:3rem 1fr}h1{margin-top:3rem}}
